@@ -60,7 +60,7 @@
                 />
 
             <RadioGroup
-                android:id="@+id/radiogroup"
+                android:id="@+id/radiogroup1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -336,7 +336,6 @@
                 android:textColor="#228B22"
                 android:textSize="25sp"
                 android:textStyle="bold"
-
                 />
 
             <RadioGroup
@@ -748,7 +747,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:backgroundTint="#45ba02"
-
+                android:onClick="reset"
                 android:padding="8dp"
                 android:text="@string/reset" />
 

@@ -97,17 +97,66 @@ public class MainActivity extends AppCompatActivity {
 
         EditText editText2 = findViewById(R.id.question_9a);
         String frogSize = editText2.getText().toString();
-        frogSize = frogSize.substring(0, 1);
-        if (frogSize.equals(13)) {
-            score = score + 1;
+        if (!frogSize.equals("") && frogSize != null) {
+            frogSize = frogSize.substring(0, 1);
+                if (frogSize.equals(13)) {
+                    score = score + 1;
+                }
         }
-
         RadioButton question10 = (RadioButton) findViewById(R.id.option_10a);
         if (question10.isChecked()) {
             score = score + 1;
         }
 
         return score;
+    }
+
+
+    public void reset(View view){
+        RadioGroup radioGroup1 = (RadioGroup)findViewById(R.id.radiogroup1);
+        radioGroup1.clearCheck();
+
+
+        CheckBox option2a = (CheckBox)findViewById(R.id.option_2a) ;
+        option2a.setChecked(false);
+
+        CheckBox option2b = (CheckBox)findViewById(R.id.option_2b) ;
+        option2b.setChecked(false);
+
+        CheckBox option2c = (CheckBox)findViewById(R.id.option_2c) ;
+        option2c.setChecked(false);
+
+        CheckBox option2d = (CheckBox)findViewById(R.id.option_2d) ;
+        option2d.setChecked(false);
+
+
+        RadioGroup radioGroup3 = (RadioGroup)findViewById(R.id.radiogroup3);
+        radioGroup3.clearCheck();
+
+        RadioGroup radioGroup4 = (RadioGroup)findViewById(R.id.radiogroup4);
+        radioGroup4.clearCheck();
+
+        RadioGroup radioGroup5 = (RadioGroup)findViewById(R.id.radiogroup5);
+        radioGroup5.clearCheck();
+
+        RadioGroup radioGroup6 = (RadioGroup)findViewById(R.id.radiogroup6);
+        radioGroup6.clearCheck();
+
+        RadioGroup radioGroup7 = (RadioGroup)findViewById(R.id.radiogroup7);
+        radioGroup7.clearCheck();
+
+        RadioGroup radioGroup8 = (RadioGroup)findViewById(R.id.radiogroup8);
+        radioGroup8.clearCheck();
+
+        EditText editText = findViewById(R.id.question_9a);
+        editText.setText("");
+
+        RadioGroup radioGroup10 = (RadioGroup)findViewById(R.id.radiogroup10);
+        radioGroup10.clearCheck();
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
     }
 
 }
